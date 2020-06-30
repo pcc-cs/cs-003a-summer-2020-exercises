@@ -10,4 +10,4 @@ vector2: vector.h vector.o vector2.o
 	g++ -c $<
 
 clean:
-	rm vector1 *.o
+	rm -f *.o vector?

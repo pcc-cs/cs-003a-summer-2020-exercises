@@ -6,19 +6,17 @@
 
 #include <iostream>
 #include <string>
-#include "room.h"
-
-Room::Room() {
-}
+#include "./room.h"
 
 Room::Room(int cap) : _cap(cap) {
   _count = 0;
   _students = new std::string[cap];
-  std::cout << "Room()" << std::endl;
+  std::cout << "Single parameter constructor" << std::endl;
 }
 
 Room::Room(Room &r) {
   // Using the copy constructor logic
+  std::cout << "Copy constructor" << std::endl;
   *this = r;
 }
 
@@ -27,7 +25,7 @@ Room::~Room() {
   std::cout << "~Room()" << std::endl;
 }
 
-Room &Room::operator=(Room &r) {
+Room &Room::operator=(const Room &r) {
   std::cout << "operator==()" << std::endl;
   _cap = r._cap;
   _count = r._count;

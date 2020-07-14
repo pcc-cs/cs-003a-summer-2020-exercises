@@ -15,10 +15,10 @@ class Room {
 
  public:
   Room();
-  Room(int);
+  explicit Room(int);
   Room(Room &);
   ~Room();
-  Room &operator=(Room &);
+  Room &operator=(const Room &);
   bool add(std::string);
   int count();
 };

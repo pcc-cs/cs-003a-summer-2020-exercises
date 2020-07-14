@@ -19,7 +19,7 @@ int main() {
    * second free() on the same memory area pointed to by
    * r2._students.
    */
-  Room r2;
+  Room r2(1);
   r2 = *r1p;
   std::cout << "r2.count() = " << r2.count() << std::endl;
 

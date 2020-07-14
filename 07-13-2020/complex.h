@@ -30,7 +30,7 @@ class Complex {
 };
 
 namespace C {
-Complex i = Complex(0, 1);
+extern Complex i;
 }
 
 #endif  // COMPLEX_H_

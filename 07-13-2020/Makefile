@@ -6,7 +6,7 @@ namespace1: namespace1.o complex.o
 namespace2: namespace2.o complex.o
 	g++ -o $@ $^
 
-namespace1.o namespace2: complex.h
+namespace1.o namespace2.o: complex.h
 
 clean:
 	rm -f namespace? *.o

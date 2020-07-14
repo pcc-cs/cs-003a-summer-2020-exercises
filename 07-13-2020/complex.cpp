@@ -55,3 +55,7 @@ Complex Complex::operator++(int) {
 void Complex::dump() {
   printf("(%.1f, %.1f)\n", _real, _imaginary);
 }
+
+namespace C {
+Complex i = Complex(0, 1);
+}

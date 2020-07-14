@@ -15,7 +15,7 @@ class Room {
 
  public:
   explicit Room(int);
-  Room(Room &);
+  Room(const Room &);
   ~Room();
   Room &operator=(const Room &);
   bool add(std::string);

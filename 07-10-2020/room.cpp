@@ -14,7 +14,7 @@ Room::Room(int cap) : _cap(cap) {
   _students = new std::string[cap];
 }
 
-Room::Room(Room &r) {
+Room::Room(const Room &r) {
   // Using the copy constructor logic
   std::cout << "Copy constructor" << std::endl;
   *this = r;

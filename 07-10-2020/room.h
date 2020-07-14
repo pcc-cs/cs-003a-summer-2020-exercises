@@ -14,7 +14,6 @@ class Room {
   std::string *_students;
 
  public:
-  Room();
   explicit Room(int);
   Room(Room &);
   ~Room();

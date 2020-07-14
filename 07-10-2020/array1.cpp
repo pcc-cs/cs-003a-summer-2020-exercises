@@ -28,7 +28,7 @@ int main() {
 
   // Uses copy constructor
   Room r3 = r2;
-  std::cout << "r2.count() = " << r2.count() << std::endl;
+  std::cout << "r3.count() = " << r3.count() << std::endl;
 
   std::cout << "Fin!" << std::endl;
 }

@@ -9,9 +9,9 @@
 #include "./room.h"
 
 Room::Room(int cap) : _cap(cap) {
+  std::cout << "Single parameter constructor" << std::endl;
   _count = 0;
   _students = new std::string[cap];
-  std::cout << "Single parameter constructor" << std::endl;
 }
 
 Room::Room(Room &r) {
@@ -21,12 +21,12 @@ Room::Room(Room &r) {
 }
 
 Room::~Room() {
-  delete [] _students;
   std::cout << "~Room()" << std::endl;
+  delete [] _students;
 }
 
 Room &Room::operator=(const Room &r) {
-  std::cout << "operator==()" << std::endl;
+  std::cout << "operator=()" << std::endl;
   _cap = r._cap;
   _count = r._count;
   _students = new std::string[_cap];

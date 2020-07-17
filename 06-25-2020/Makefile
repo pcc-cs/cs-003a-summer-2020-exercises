@@ -7,4 +7,4 @@ vector1: vector.h vector.o vector1.o
 	g++ -o $@ $^
 
 clean:
-	rm student4 *.o
+	rm -f student4 vector1 *.o

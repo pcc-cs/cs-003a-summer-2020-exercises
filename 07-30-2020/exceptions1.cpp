@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <exception>
 
 class Panic {
  private:
@@ -51,10 +52,11 @@ int main() {
   scanf("%d, %d", &a, &b);
 
   try {
+    std::set_terminate([]() {
+      printf("Whatever\n");
+    });
     printf("%d - %d = %d\n", a, b, sub(a, b));
   } catch (Error e) {
     printf("error %s\n", e);
-  } catch (Panic e) {
-    printf("%s\n", e.msg());
   }
 }

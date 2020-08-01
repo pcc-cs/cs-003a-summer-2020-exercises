@@ -7,4 +7,4 @@ exceptions2: exceptions2.o
 	g++ -o $@ $<
 
 clean:
-	rm -f exceptions1 *.o
+	rm -f exceptions? *.o
